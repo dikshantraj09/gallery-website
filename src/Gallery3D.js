@@ -5,12 +5,10 @@ import {
   Text,
   ScrollControls,
   Scroll,
-  useScroll,
   Html,
 } from "@react-three/drei";
-import { EffectComposer, Noise, Vignette } from "@react-three/postprocessing";
+import { EffectComposer, Vignette } from "@react-three/postprocessing";
 import { TextureLoader, Vector3 } from "three";
-import { useNavigate } from "react-router-dom";
 import ReactHowler from "react-howler";
 const ART_PIECES = [
   { title: "One Where it All Began", imgPath: "/Image00001.jpg" },
@@ -28,7 +26,7 @@ const ART_PIECES = [
 
 const WallArt = (props) => {
   const { art, i } = props;
-  const { width: w, height: h } = useThree((state) => state.viewport);
+  const { width: w } = useThree((state) => state.viewport);
   const gap = 4;
   const imageWidth = 3.5;
   const texture = useLoader(TextureLoader, art.imgPath);

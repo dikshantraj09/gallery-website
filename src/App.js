@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useNavigate,
 } from "react-router-dom";
 import InvitationCard from "./InvitationCard";
 import GalleryApp from "./Gallery3D";
