@@ -12,6 +12,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@font-face {
+  font-family: curvsive;
+  src: url(https://fonts.gstatic.com/s/sacramento/v5/buEzpo6gcdjy0EiZMBUG4C0f-w.woff);
+}
 
 .App-header {
   background-color: #282c34;
@@ -35,4 +39,184 @@
   to {
     transform: rotate(360deg);
   }
+}
+body {
+  margin: 0;
+  font-family: "Helvetica", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #f8d0e1, #ff769f);
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  background-color: #fffaef;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 200px 200px 0px 0px;
+  width: 20rem;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-bottom: 0px;
+}
+
+.invitation-title {
+  font-family: curvsive;
+  font-size: 2.2rem;
+  color: #d36b91;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: 2rem;
+  color: #8b3a62;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: linear-gradient(to bottom, #fffaef, #fffaef, #fbe3eb, #ff769f);
+}
+
+.event-title {
+  font-family: curvsive;
+  font-size: 1.8rem;
+  color: #5a2253;
+  margin: 1rem 0;
+}
+
+.guest-name {
+  font-weight: bold;
+}
+
+.invitation-button {
+  background-color: #d36b91;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.invitation-button {
+  background-color: #d36b91;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.invitation-button.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.invitation-button:not(.disabled):hover {
+  background-color: #c05b81;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.countdown {
+  font-size: 1.2rem;
+  color: #d36b91;
+  margin: 1rem 0;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.countdown span {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  background-color: #ffe6f0;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  display: block;
+}
+
+.transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.zoom-animation {
+  animation: zoom 4s forwards;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.fade-animation {
+  animation: fade 5s forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.transition-text {
+  color: white;
+  font-size: 2rem;
+  font-family: cursive;
+}
+/* Smooth touch interaction */
+.scroll {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; /* Enables momentum scrolling on iOS */
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.scroll::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for Chrome, Safari, and Edge */
 }
