@@ -91,7 +91,7 @@ const Scene = () => {
       }
     >
       <ScrollControls
-        infinite
+        // infinite
         horizontal
         damping={1}
         pages={39 * Math.exp(-0.11 * screenWidth)}
