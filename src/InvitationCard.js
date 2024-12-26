@@ -57,7 +57,7 @@ const CountdownTimer = ({ targetDate, onCelebration }) => {
 };
 
 const InvitationCard = () => {
-  const eventDate = "2024-12-26T14:52:50";//"2025-01-04T00:00:00";
+  const eventDate = "2025-01-04T00:00:00";
   const [showTransition, setShowTransition] = useState(false);
   const audio = new Audio("/celeb.mp3");
   const handleCelebration = () => {
