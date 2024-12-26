@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import confetti from "canvas-confetti"; // Import confetti library
 import "./App.css";
 import mainImage from "./assets/main.png";
-import { useNavigate } from "react-router-dom";
 import PageTransition from "./PageTransition";
 
 const CountdownTimer = ({ targetDate, onCelebration }) => {
@@ -60,7 +59,6 @@ const CountdownTimer = ({ targetDate, onCelebration }) => {
 const InvitationCard = () => {
   const eventDate = "2024-12-26T14:52:50";//"2025-01-04T00:00:00";
   const [showTransition, setShowTransition] = useState(false);
-  const navigate = useNavigate();
   const audio = new Audio("/celeb.mp3");
   const handleCelebration = () => {
     try {
